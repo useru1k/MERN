@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background:linear-gradient(120deg,#2980b9,#8e44ad);
+	height: 100px;
+}
+.it1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	background: white;
+	border-radius: 10px;
+}
+.it1 h1{
+	text-align: center;
+	padding: 0 0 20px  0;
+	border-bottom: 2px solid black;
+
+}
+.it1 form{
+	text-align: center;
+	padding: 0 0 20px  0;
+}
+form input{
+	text-align: center;
+}
+input[type="submit"]{
+	width: 50%;
+	height:30px;
+	background: #2691b9;
+	border-radius: 10px;
+}
+input[type="username"]{
+	width: 50%;
+	height:25px;
+	border-radius: 10px;
+}
+input[type="email"]{
+	width: 50%;
+	height:25px;
+	border-radius: 10px;
+}
+input[type="text"]{
+	width: 50%;
+	height:25px;
+	border-radius: 10px;
+}
+input[type="password"]{
+	width: 50%;
+	height:25px;
+	border-radius: 10px;
+}
+h1{
+	font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+<body>
+    <script>
+        function fuc(){
+            let name = "e.target.value";
+            alert(name);
+        }
+    </script>
+	<br><br>
+
+	<h1 style="text-align: center;"></h1>
+
+	<div class="it1">
+		<h1>Form</h1>
+
+		<form class="box" onsubmit="fuc()" action="" method="" novalidate>
+		
+		<input type="username" placeholder="Username" id="name" required>
+		<br><br>
+	
+		<input type="email"  placeholder="email" id="email" > 
+
+		<br><br>
+        <input type="text"  placeholder="phone number" id="ph" >
+        <br><br>
+        <input type="password"  placeholder="password" id="password" >
+        <br><br>
+		<button type="submit">submit</button>
+		<br><br>
+
+	</form>
+</div>
+</body>
+</html>
