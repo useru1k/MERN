@@ -12,3 +12,10 @@ async function api()
     }
 }
 api()
+
+// function apica(){
+//     const apidata = await api()
+//     console.log(apidata)
+//     // const structuredatamap = apidata.map(data) => { console.log(data)}
+// }
+// apica() 
