@@ -1,9 +1,14 @@
 import Hello from "./components/Hello";
+import Navbar from "./components/Navbar";
+import Profile from "./pages/Profile";
+import Popup from "./components/popup";
 
 function App() {
   return(
     <>
-      <Hello />
+      <Navbar />
+      {/* <Profile /> */}
+      <Popup />
     </>
   )
 }
