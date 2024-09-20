@@ -1,17 +1,27 @@
-function Navbar(){
-    return(
-        <>
-            <nav className="w-screen h-11 flex justify-around flex-row items-center bg-slate-300">
-                <div className="text-2xl font-mono">Yuvan krishna</div>
-                    <div className="flex"> 
-                        <ul className="flex flex-row space-x-8 font-mono"> 
-                            <li><a href="#about">About Me</a></li>
-                            <li><a href="#skill">Skill</a></li>
-                            <li><a href="#contact">Contact Me</a></li>
-                        </ul>
-                    </div>
-            </nav>
-        </>
-    )
-}
-export default Navbar;
+function Navbar() {
+    return (
+      <nav className="flex justify-between items-center p-6 bg-gray-100 shadow-md">
+        <div className="text-2xl font-bold">Yuvan Krishna</div>
+        <ul className="flex gap-6">
+          <li>
+            <a href="#about" className="hover:underline">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#skill" className="hover:underline">
+              Skill
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:underline">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+  
+  export default Navbar;
+  
