@@ -2,7 +2,7 @@ function Profile() {
     return (
       <section
         id="profile"
-        className="h-[80vh] w-screen flex flex-col md:flex-row justify-center items-center gap-12 p-12"
+        className="h-[80vh] w-screen flex flex-col md:flex-row justify-center items-center gap-12 p-12 bg-gray-50"
       >
         <div className="w-72 h-72 md:w-80 md:h-80">
           <img
