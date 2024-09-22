@@ -16,6 +16,8 @@ function App() {
       {/* <Profile /> */}
       {/* <About /> */}
       {/* <ContactSection /> */}
+
+      
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
