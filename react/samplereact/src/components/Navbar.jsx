@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 function Navbar() {
     return (
       <nav className="flex justify-between items-center p-6 bg-gray-100 shadow-md">
