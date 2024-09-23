@@ -17,7 +17,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="" className="hover:underline">
+            <Link to="/Projects" className="hover:underline">
               Skill
             </Link>
           </li>

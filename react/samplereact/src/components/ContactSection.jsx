@@ -1,6 +1,6 @@
 function ContactSection() {
     return (
-      <section id="contact" className="p-10">
+      <section id="contact" className="p-10 bg-gray-50 h-[87vh]">
         <p className="text-center text-lg font-medium">Get in Touch</p>
         <h1 className="text-center text-3xl font-bold mb-6">Contact Me</h1>
         <div className="flex flex-col md:flex-row justify-center gap-8 items-center">
