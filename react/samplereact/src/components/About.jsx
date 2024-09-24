@@ -25,14 +25,13 @@ function About() {
               <h2 className="text-xl font-semibold">Skills</h2>
               <div className="flex justify-center mt-4 space-x-4">
                   <i className="fa-brands fa-linux text-2xl" title="Linux"></i>
+                  <i className="fa-brands fa-golang  text-2xl" title="GO-Lang"></i>
+                  <i className="fa-brands fa-c text-2xl" title="C"></i>
                   <i className="fa-brands fa-python text-2xl" title="Python"></i>
                   <i className="fa-brands fa-github text-2xl" title="GitHub"></i>
                   <i className="fa-brands fa-java text-2xl" title="Java"></i>
                   <i className="fa-brands fa-react text-2xl" title="React"></i>
                   <i className="fa-brands fa-git text-2xl" title="Git"></i>
-
-
-                  {/* Add more skill icons as needed */}
               </div>
           </div>
       </section>

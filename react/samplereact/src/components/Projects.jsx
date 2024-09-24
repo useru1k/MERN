@@ -1,13 +1,13 @@
 function Projects() {
     const projectData = [
         {
-            title: "Cybersecurity Tool Development",
-            description: "Developed a tool for vulnerability scanning and analysis to help organizations identify security weaknesses.",
+            title: "Signature Less Ransomware Detection using LSTM",
+            description: "Detecting a file or text is a Ransomware or Not",
             link: "https://example.com/project1",
         },
         {
-            title: "Network Security Audit",
-            description: "Conducted a comprehensive audit of network security protocols for a local business, improving their overall security posture.",
+            title: "DeepFake Detection Using CNN",
+            description: "Detecting a image is DeepFake or Not",
             link: "https://example.com/project2",
         },
         {
@@ -19,7 +19,7 @@ function Projects() {
     ];
 
     return (
-        <section id="projects" className="w-screen p-10 bg-gray-100 flex flex-col">
+        <section id="projects" className="w-screen p-10 bg-gray-50 flex flex-col">
             <h1 className="text-3xl font-bold text-center mb-8">My Projects</h1>
             
             <div className="flex flex-col gap-6">
