@@ -1,15 +1,16 @@
-const mongoose = require('mongoose')    // Importing mongoose to interact with MongoDB
+const mongoose = require('mongoose'); // Importing mongoose to interact with MongoDB
 
 // Connecting to MongoDB 
-mongoose.connect(process.env.MONGO || "mongodb+srv://uvvi571:IPL2024YK@cluster0-in.thhrq.mongodb.net/")
+mongoose.connect(process.env.MONGOURL || "mongodb+srv://uvvi571:password@cluster0-in.thhrq.mongodb.net/");
 
-const connnection = mongoose.connection;  // Connection and access to DB
+const connection = mongoose.connection; // Corrected typo from connnection to connection
 
-connnection.on('connected', () => {
-    console.log('DB connect') // It print the Text, If DB is Connected
-})
+connection.on('connected', () => {
+    console.log('DB connected'); // Prints when DB is connected
+});
 
-connnection.on('error', () => {
-    console.log('DB error') // It print the Text, If DB is not Connected
-})
-module.exports = mongoose // it can be used in other parts of the application to define schemas, models, and perform database operations
+connection.on('error', (error) => {
+    console.error('DB connection error:', error); // Improved error logging
+});
+
+module.exports = mongoose; // Exporting mongoose for use in other files

@@ -1,31 +1,29 @@
-const express = require('express') //Importing a express for router 
+const express = require('express'); // Importing express for router 
 const router = express.Router(); 
-const projects = require('../model/projectModel')
+router.use(express.json())
+const projects = require('../model/projectModel');
 
-router.get('/all',async(req,res) => { // To get all request and response
+router.get('/all', async (req, res) => {
     try {
-        const fetchedproject = await projects.find() // Finding a collections
-        res.json(fetchedproject).status(200) // Printing a status
-        
+        const fetchedProjects = await projects.find(); // Finding all documents
+        res.status(200).json(fetchedProjects); // Correct order of status and json
     } catch (error) {
-        res.json(error).status(500)
+        res.status(500).json({ error: error.message }); // Improved error response
     }
-})
+});
 
-router.post('/add',async(req,res) => {
+router.post('/add', async (req, res) => {
     try {
-        const newproject = await projects(req.body)
-        // Checking the value is null
-        const {name ,email } = newproject
-        if(name || email)
-        {
-            res.json({message:"Both are required"}).status(500)
+        const newProject = await projects(req.body); // Creating a new project
+        const { title, desc } = newProject;
+        if (!title || !desc) {
+            return res.status(400).json({ message: "Both name and email are required" });
         }
-
-        await projects.create()
-        res.json({message:"add"}).status(201)
-        
+        await newProject.save(); // Save the new project to the database
+        res.status(201).json({ message: "Project added successfully" });
     } catch (error) {
-        res.json(error).status(500)
+        res.status(500).json({ error: error.message });
     }
-})
+});
+
+module.exports = router;
