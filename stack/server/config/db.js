@@ -1,7 +1,7 @@
 const mongoose = require('mongoose'); // Importing mongoose to interact with MongoDB
 
 // Connecting to MongoDB 
-mongoose.connect(process.env.MONGOURL || "mongodb+srv://uvvi571:password@cluster0-in.thhrq.mongodb.net/");
+mongoose.connect(process.env.MONGOURL);
 
 const connection = mongoose.connection; // Corrected typo from connnection to connection
 
