@@ -20,21 +20,36 @@ router.post('/add', async (req, res) => {
             return res.status(400).json({ message: "Both name and email are required" });
         }
         await newProject.save(); // Save the new project to the database
-        res.status(201).json({ message: "Project added successfully" });
+        res.status(201).json({ message: "World is created..!" });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
+
+router.put('/edit/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        // const { id } = req.params;
+        const currentrecord = await projects.findOne({ _id: id })
+        if (!currentrecord) {
+            res.status(404).json({ message: "World not found!" })
+        }
+        const updateProject = await projects.findByIdAndUpdate(id, req.body, { new: true })
+        res.status(200).json(updateProject)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
 
 router.delete('/delete/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const world = await projects.findOne({ _id: id })
         if (!world) {
-            res.status(404).json({ message: "Project not found !" })
+            res.status(404).json({ message: "World not found!" })
         }
         const deleteProject = await projects.findByIdAndDelete(id)
-        res.status(200).json({ message: "Project Deleted !" })
+        res.status(200).json({ message: "Mini World Deleted !" })
     } catch (e) {
         res.status(500).json(error)
     }
