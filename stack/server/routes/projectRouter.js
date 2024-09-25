@@ -26,4 +26,18 @@ router.post('/add', async (req, res) => {
     }
 });
 
+router.delete('/delete/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const world = await projects.findOne({ _id: id })
+        if (!world) {
+            res.status(404).json({ message: "Project not found !" })
+        }
+        const deleteProject = await projects.findByIdAndDelete(id)
+        res.status(200).json({ message: "Project Deleted !" })
+    } catch (e) {
+        res.status(500).json(error)
+    }
+})
+
 module.exports = router;
